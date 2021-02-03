@@ -1,0 +1,19 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+
+  <div *ngIf="datalocalService.noticias.length === 0" class="ion-padding">
+    <p>No hay favoritos</p>
+  </div>
+  
+  <app-noticias *ngIf="datalocalService.noticias.length > 0" 
+                [noticias]="datalocalService.noticias"
+                [enFavoritos]="true">
+  </app-noticias>
+</ion-content>
